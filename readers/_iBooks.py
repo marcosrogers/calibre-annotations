@@ -8,11 +8,12 @@ __license__ = 'GPL v3'
 __copyright__ = '2013, Greg Riker <griker@hotmail.com>'
 __docformat__ = 'restructuredtext en'
 
-import cStringIO, os, re, sqlite3
+import os, re, sqlite3
 
+from io import StringIO
 from lxml import etree
 
-from calibre.ebooks.BeautifulSoup import UnicodeDammit
+from bs4 import UnicodeDammit
 from calibre.gui2 import Application
 
 from calibre_plugins.annotations.reader_app_support import iOSReaderApp
@@ -295,7 +296,7 @@ class iBooksReaderApp(iOSReaderApp):
         OPF_path = None
         container = '/'.join([path, 'META-INF', 'container.xml'])
         if self.ios.exists(container):
-            f = cStringIO.StringIO(self.ios.read(container))
+            f = StringIO(self.ios.read(container))
             tree = etree.parse(f).getroot()
             #self._log(etree.tostring(tree, pretty_print=True))
             rootfiles = tree[0]
@@ -303,7 +304,7 @@ class iBooksReaderApp(iOSReaderApp):
             OPF_path = '/'.join([path, rootfile.get('full-path')])
 
         if OPF_path and self.ios.exists(OPF_path):
-            f = cStringIO.StringIO(self.ios.read(OPF_path))
+            f = StringIO(self.ios.read(OPF_path))
             opf_tree = etree.parse(f).getroot()
 
             if False:

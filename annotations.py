@@ -18,7 +18,7 @@ from datetime import datetime
 from xml.sax.saxutils import escape
 
 from calibre.devices.usbms.driver import debug_print
-from calibre.ebooks.BeautifulSoup import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag
 from calibre_plugins.annotations.common_utils import Logger
 from calibre_plugins.annotations.config import plugin_prefs
 

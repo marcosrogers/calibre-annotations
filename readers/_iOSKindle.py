@@ -10,9 +10,9 @@ __docformat__ = 'restructuredtext en'
 
 import os, re, sqlite3
 
-from cStringIO import StringIO
+from io import StringIO
 
-from calibre.ebooks.BeautifulSoup import UnicodeDammit
+from bs4 import UnicodeDammit
 
 from calibre_plugins.annotations.reader_app_support import iOSReaderApp
 from calibre_plugins.annotations.common_utils import (AnnotationStruct, BookStruct,

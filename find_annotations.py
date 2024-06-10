@@ -15,7 +15,7 @@ from dateutil.tz import tzlocal, tzutc
 from functools import partial
 from time import mktime
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from calibre.gui2.metadata.basic_widgets import DateEdit
 
 try:

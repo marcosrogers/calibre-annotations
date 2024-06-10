@@ -35,7 +35,7 @@ except ImportError as e:
         pyqtSignal)
     from PyQt4.QtGui import QSizePolicy
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from calibre.gui2.dialogs.message_box import MessageBox
 from calibre.constants import islinux, iswindows
 from calibre.devices.usbms.driver import debug_print

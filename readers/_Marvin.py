@@ -12,7 +12,7 @@ import os, re, sqlite3
 
 from lxml import etree, html
 
-from calibre.ebooks.BeautifulSoup import UnicodeDammit
+from bs4 import UnicodeDammit
 from calibre.gui2 import Application
 
 from calibre_plugins.annotations.reader_app_support import iOSReaderApp

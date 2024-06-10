@@ -39,7 +39,7 @@ except ImportError as e:
     debug_print("Annotations plugin: Error is: ", e)
     LIBIMOBILEDEVICE_AVAILABLE = False
 
-from calibre.ebooks.BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from calibre.ebooks import normalize
 from calibre.gui2 import Application, open_url
 from calibre.gui2.device import device_signals

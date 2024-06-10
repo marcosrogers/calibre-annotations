@@ -49,7 +49,7 @@ except ImportError as e:
 from calibre.constants import iswindows
 from calibre.devices.usbms.driver import debug_print
 from calibre.ebooks import normalize
-from calibre.ebooks.BeautifulSoup import BeautifulSoup, BeautifulStoneSoup
+from bs4 import BeautifulSoup, BeautifulStoneSoup
 from calibre.ebooks.metadata import MetaInformation
 from calibre.gui2 import Application, gprefs, error_dialog, info_dialog, UNDEFINED_QDATETIME
 from calibre.gui2.dialogs.message_box import MessageBox

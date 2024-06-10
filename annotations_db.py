@@ -9,7 +9,7 @@ import os, sqlite3, sys
 from datetime import datetime
 
 from calibre.devices.usbms.driver import debug_print
-from calibre.ebooks.BeautifulSoup import NavigableString
+from bs4 import NavigableString
 from calibre_plugins.annotations.annotations import Annotation, Annotations
 from calibre_plugins.annotations.common_utils import AnnotationStruct, Logger
 from calibre_plugins.annotations.config import plugin_prefs
